@@ -1,0 +1,61 @@
+.datalist {
+  margin-left: 50%;
+  display: flex;
+}
+
+.datalist::before {
+  content: "";
+  position: relative;
+  width: 12px;
+  height: 12px;
+  top: 13px;
+  background: #1f374b;
+  margin-left: -7px;
+  border-radius: 50%;
+  border: solid 3px lightgray;
+  animation: circleInfo 1s ease-out 1s;
+  animation-fill-mode: both;
+}
+.content {
+  z-index: 99;
+  width: 20px;
+  margin-left: -20px;
+  margin-bottom: -15px;
+  margin-top: 10px;
+}
+.content .tooltiptext {
+  visibility: hidden;
+  max-width: 200px;
+  background-image: linear-gradient(90deg, #1f374b, #335979);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 999;
+  left: 52%;
+}
+.content .tooltiptext::after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #1f374b transparent transparent;
+}
+.content:hover .tooltiptext {
+  visibility: visible;
+}
+
+@keyframes circleInfo {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}

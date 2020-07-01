@@ -1,38 +1,99 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes profilePicture {
+  from {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px lightgray;
+  }
+  to {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 3px lightgray;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.userImage {
+  animation: profilePicture 2s ease-out;
+  animation-fill-mode: both;
+}
+
+.temp {
+  position: relative;
+}
+
+.temp::before {
+  height: 100%;
+  content: "";
+  position: absolute;
+  align-content: center;
+  border: solid 2px lightgray;
+}
+
+.expLists {
+  padding-top: 50px;
+}
+
+.mycontent-description {
+  text-align: left;
+  padding: 10px;
+}
+
+.mycontent-info {
+  background-color: lightgray;
+  padding: 10px 10px 5px 10px;
+  text-align: left;
+}
+
+.mycontent-info > div {
+  padding-bottom: 5px;
+}
+
+.mycontent-info-icon {
+  padding-right: 10px;
+  width: 20px;
+  display: inline-block;
+}
+
+.header {
+  border-top-right-radius: 7px;
   display: flex;
+  border-top-left-radius: 7px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: linear-gradient(90deg, #1f374b, #335979);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.headerText {
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.mycontentDescription {
+  text-align: left;
+  padding: 10px;
 }
+
+
+.mycontentInfo {
+  background-color: lightgray;
+  padding: 10px 10px 5px 10px;
+  text-align: left;
+}
+
+.mycontentInfo > div {
+  padding-bottom: 5px;
+}
+
+.mycontentInfoIcon {
+  padding-right: 10px;
+  width: 20px;
+  display: inline-block;
+}
+
+
